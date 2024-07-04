@@ -3,6 +3,7 @@ export default function Navbar({ inicio, publicaciones, noticias }) {
     <>
       <header>
         <nav className="navbar">
+          
           {/*si el usuario esta conectado muestra el perfil, pero si no muestra login*/}
           <div className="usuario">
             <ul>
@@ -10,7 +11,7 @@ export default function Navbar({ inicio, publicaciones, noticias }) {
                 <li>En linea</li>
             </ul>
           </div>
-
+            
           <ul>
             <li>
               <a href="#">Inicio</a>
