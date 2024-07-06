@@ -1,30 +1,42 @@
 import ProfileNavBar from "./profilenavbar";
 import "./Header.css"
+import { useState } from "react";
 
 export default function Header({ inicio, publicaciones, noticias }) {
+  const [menu, setMenu] = useState("inicio");
+  const menuItems = [
+    { id: "inicio", label: "Inicio" },
+    { id: "rutas", label: "Rutas" },
+    { id: "comunidad", label: "Comunidad" },
+    { id: "eventos", label: "Eventos" },
+    { id: "perfil", label: "Perfil" }
+  ];
+
   return (
-    <>
-      <header className="header">
-        <nav className="navbar">         
-          {/*si el usuario esta conectado muestra el perfil, pero si no muestra login*/}
-          <img src="./src/assets/images/logobici.png" className="imglogobici" alt="logo" />         
-          <ul>
-            <li>
-             <a href="#">Inicio</a>
+    <header className="header">
+      <nav className="navbar">
+        <img src="./src/assets/images/logobici.png" alt="logo" />
+        <ul>
+          {menuItems.map(item => (
+            <li key={item.id}>
+              <input
+                type="radio"
+                id={item.id}
+                name="menu"
+                checked={menu === item.id}
+                onChange={() => setMenu(item.id)}
+              />
+              <label
+                htmlFor={item.id}
+                className={menu === item.id ? "menu active" : "menu"}
+              >
+                {item.label}
+              </label>
             </li>
-            <li>
-              <a href="#">Ruta</a>
-            </li>
-            <li>
-              <a href="#">Eventos</a>
-            </li>
-            <li>
-              <a href="#">Comunidad</a>
-            </li>
-          </ul>
-          <ProfileNavBar name={"ClaudioCarlos"} status={"En Linea"}/>  
-        </nav>
-      </header>
-    </>
+          ))}
+        </ul>
+        <ProfileNavBar name={"ClaudioCarlos"} status={"En Linea"} />
+      </nav>
+    </header>
   );
 }
