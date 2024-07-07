@@ -1,0 +1,53 @@
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  background-color: #edf2f7; /* Similar to bg-zinc-100 */
+  border-radius: 8px;
+  border: 1px solid #cbd5e0; /* Optional: to add border */
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.form-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-checkbox {
+  transform: scale(1.5); /* Increase the size of the checkbox */
+}
+
+.form-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #4299e1; /* Similar to bg-blue-500 */
+  color: white;
+}
+
+.secondary {
+  background-color: #e2e8f0; /* Similar to bg-zinc-200 */
+  color: #4a5568; /* Similar to text-zinc-700 */
+}

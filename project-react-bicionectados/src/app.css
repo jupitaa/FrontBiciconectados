@@ -1,0 +1,12 @@
+.app {
+  min-height: 100vh;
+  background-color: #f7fafc; /* Similar to bg-zinc-100 */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 16px;
+}

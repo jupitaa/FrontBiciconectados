@@ -1,11 +1,11 @@
 import React from "react";
-
-import Header from "./components/Header/Header";
+import LoginPage from "./pages/LoginPage";
+import MapaPage from "./pages/MapaPage";
 
 function App() {
   return (
     <>
-      <Header />
+      <MapaPage />
     </>
   );
 }

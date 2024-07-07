@@ -5,6 +5,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-container">
+     
         <div className="login">
           <h1>Iniciar Sesión</h1>
           <input type="email" placeholder="Email" />
