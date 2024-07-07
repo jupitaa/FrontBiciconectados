@@ -2,10 +2,12 @@ import ProfileNavBar from "./profilenavbar";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import ButtonLogin from "../buttons/ButtonLogin"
+import ButtonLogin from "../buttons/ButtonLogin";
 
 export default function Header({ inicio, publicaciones, noticias }) {
   const [menu, setMenu] = useState("inicio");
+  const [logged, setLogged] = useState(false);
+  
   return (
     <header className="header">
       <nav className="navbar">
@@ -50,14 +52,19 @@ export default function Header({ inicio, publicaciones, noticias }) {
           <li>
             <Link
               to="/perfil"
-              onClick={() => setMenu("ferfil")}
+              onClick={() => setMenu("perfil")}
               className={menu === "perfil" ? "active" : ""}
             >
               Perfil
             </Link>
           </li>
         </ul>
-        <ButtonLogin />
+        {logged === true ? (
+          <ProfileNavBar name="Usuario" status="En línea" />
+        ) : (
+          <ButtonLogin  />
+        )}
+       
       </nav>
     </header>
   );
