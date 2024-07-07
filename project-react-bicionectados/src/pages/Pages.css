@@ -1,0 +1,25 @@
+.page {
+  width: 70%;
+  height: 100vh;
+  margin: 50px auto;
+}
+.grid-temas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filter-button {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  background-color: var(--VerdePlano);
+}
+.filter {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
