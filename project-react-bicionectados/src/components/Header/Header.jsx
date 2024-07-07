@@ -2,6 +2,7 @@ import ProfileNavBar from "./profilenavbar";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import ButtonLogin from "../buttons/ButtonLogin"
 
 export default function Header({ inicio, publicaciones, noticias }) {
   const [menu, setMenu] = useState("inicio");
@@ -56,7 +57,7 @@ export default function Header({ inicio, publicaciones, noticias }) {
             </Link>
           </li>
         </ul>
-        <ProfileNavBar name={"ClaudioCarlos"} status={"En Linea"} />
+        <ButtonLogin />
       </nav>
     </header>
   );
