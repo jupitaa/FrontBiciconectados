@@ -1,28 +1,33 @@
 import ProfileNavBar from "./profilenavbar";
-import "./Header.css"
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header({ inicio, publicaciones, noticias }) {
   return (
     <>
       <header className="header">
-        <nav className="navbar">         
+        <nav className="navbar">
           {/*si el usuario esta conectado muestra el perfil, pero si no muestra login*/}
-          <img src="./src/assets/images/logobici.png" className="imglogobici" alt="logo" />         
+          <img
+            src="./src/assets/images/logobici.png"
+            className="imglogobici"
+            alt="logo"
+          />
           <ul>
             <li>
-             <a href="#">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <a href="#">Ruta</a>
+              <Link to="/rutas">Ruta</Link>
             </li>
             <li>
-              <a href="#">Eventos</a>
+              <Link to="/eventos">Eventos</Link>
             </li>
             <li>
-              <a href="#">Comunidad</a>
+              <Link to="/comunity">Comunidad</Link>
             </li>
           </ul>
-          <ProfileNavBar name={"ClaudioCarlos"} status={"En Linea"}/>  
+          <ProfileNavBar name={"ClaudioCarlos"} status={"En Linea"} />
         </nav>
       </header>
     </>

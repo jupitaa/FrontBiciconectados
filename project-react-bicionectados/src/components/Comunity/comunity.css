@@ -1,0 +1,41 @@
+.tema-container {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+.tema-description {
+  padding: 5px;
+  width: 50%;
+}
+.tema-description > h3 {
+  width: 100%;
+  margin: 5px 0;
+}
+.tema-description > p {
+  width: 100%;
+  margin: 0;
+}
+.tema-info {
+  padding: 5px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  width: 20%;
+  align-items: center;
+}
+.tema-info > span {
+  margin: 0;
+}
+.tema-autor {
+  padding-right: 20px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+}
