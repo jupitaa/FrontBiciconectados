@@ -22,11 +22,10 @@
   margin: 10px;
 }
 .navbar > ul > li {
- 
   display: flex;
   align-items: center;
 }
-.navbar > ul > li >a {
+.navbar > ul > li > a {
   z-index: 2;
   text-decoration: none;
   position: relative;
@@ -66,7 +65,7 @@
   background: var(--fondobackgroundblanco);
   height: var(--LineHeight);
   bottom: var(--BottomOffset);
-  left: calc(var(--LineHeight)/-2);
+  left: calc(var(--LineHeight) / -2);
   transition: 0.3s cubic-bezier(0.03, 0.3, 0.4, 0.96);
   border-radius: 15px 15px 0px 0px;
 }

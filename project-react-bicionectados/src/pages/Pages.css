@@ -1,4 +1,76 @@
-.page {
+.home-background {
+  background: linear-gradient(160deg, #ffffff 50%, #bff16a 50%);
+}
+.home-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+  height: calc(100vh - 60px);
+}
+.home-infoapp {
+  margin-top: 35px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page > .home-infoapp > img {
+  width: 30%;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.home-infoapp > p {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.home-infoapp > span {
+  width: 80%;
+  font-style: italic;
+}
+.info-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  height: auto;
+  width: 80%;
+  gap: 10px;
+  background: linear-gradient(180deg, #bef16a 39%, #94d726 74%);
+  border-radius: 30px;
+}
+.info-details strong {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+.info-details span {
+  text-align: center;
+  font-weight: bold;
+}
+.home-msg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  gap: 20px;
+  width: 50%;
+  height: 300px;
+}
+.conocenos-container {
+  width: 85%;
+  display: flex;
+  justify-content: end;
+}
+.adjust-page {
   width: 70%;
   height: 100vh;
   margin: 50px auto;

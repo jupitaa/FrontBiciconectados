@@ -2,7 +2,7 @@ import "./Pages.css";
 import Temas from "../components/Comunity/temas";
 export default function ComunityPage() {
   return (
-    <div className="page">
+    <div className="adjust-page">
       <div className="grid-temas">
         <div className="filter-button">
           <div className="filter">
