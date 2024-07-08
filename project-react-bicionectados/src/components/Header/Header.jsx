@@ -7,7 +7,7 @@ import ButtonLogin from "../buttons/ButtonLogin";
 export default function Header({ inicio, publicaciones, noticias }) {
   const [menu, setMenu] = useState("inicio");
   const [logged, setLogged] = useState(false);
-  
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -62,9 +62,8 @@ export default function Header({ inicio, publicaciones, noticias }) {
         {logged === true ? (
           <ProfileNavBar name="Usuario" status="En línea" />
         ) : (
-          <ButtonLogin  />
+          <ButtonLogin />
         )}
-       
       </nav>
     </header>
   );

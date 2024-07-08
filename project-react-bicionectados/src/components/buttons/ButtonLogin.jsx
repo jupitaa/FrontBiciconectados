@@ -6,16 +6,15 @@ const ButtonLogin = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    {/*navigate("/login");*/}
+    navigate("/login");
   };
 
   return (
     <button onClick={handleLoginClick} className="button-inicio-sesion">
       Iniciar sesión
-    <div className="arrow-wrapper">
+      <div className="arrow-wrapper">
         <div className="arrow"></div>
-
-    </div>
+      </div>
     </button>
   );
 };

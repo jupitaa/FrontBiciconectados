@@ -18,10 +18,7 @@ body {
   border-radius: 90px;
   box-sizing: border-box;
   overflow: hidden;
-  position: absolute;
-  left: 50%; /* Posicionamiento a la mitad del ancho del viewport */
-  top: 50%; /* Posicionamiento a la mitad del alto del viewport */
-  transform: translate(-50%, -50%); /* Centrado perfecto */
+  margin: auto; /* Posicionamiento a la mitad del alto del viewport */
 }
 
 /* Estilos para el formulario de inicio de sesión */
