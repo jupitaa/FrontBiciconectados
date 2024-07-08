@@ -5,9 +5,10 @@ import ButtonConocenos from "../components/buttons/ConocenosButton";
 export default function Home() {
   return (
     <div className="home-background">
+      <div class="background-image"></div>
       <div className="home-page">
         <div className="home-infoapp">
-          <img src="./src/assets/images/bicicleta.png" alt="" />
+          <img src="./src/assets/images/8tVa.gif" alt="" />
           <IconContext.Provider value={{ size: "4em" }}>
             <p>
               <TbWorldHeart />
@@ -28,7 +29,7 @@ export default function Home() {
             Pedalea, comparte, inspira: La red social donde cada kilómetro
             cuenta.
           </h2>
-          <h3>UNETE, CONOCE AMIGOS Y DESCUBRE EL MUNDO</h3>
+          <h5>UNETE, CONOCE AMIGOS Y DESCUBRE EL MUNDO</h5>
         </div>
         <div className="conocenos-container">
           <ButtonConocenos />
