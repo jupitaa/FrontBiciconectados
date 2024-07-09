@@ -1,10 +1,11 @@
 import "leaflet/dist/leaflet.css";
 import { useState } from "react";
 import "./Pages.css";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet-routing-machine";
 import RoutingMachine from "../components/MapComponents/RoutingMachine";
 import DefaultButton from "../components/buttons/DefaultButton";
+import RouteDetails from "../components/MapComponents/RouteDetails";
 
 export default function RoutePage() {
   // Coordenadas predeterminadas (Santiago de Chile)
@@ -15,6 +16,7 @@ export default function RoutePage() {
   const [endCoordinates, setEndCoordinates] = useState(defaultEnd);
   const [startAddress, setStartAddress] = useState("");
   const [endAddress, setEndAddress] = useState("");
+  const [route, setRoute] = useState(null);
 
   const handleGeocode = async (e) => {
     e.preventDefault();
@@ -57,8 +59,13 @@ export default function RoutePage() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <RoutingMachine start={startCoordinates} end={endCoordinates} />
+          <RoutingMachine
+            start={startCoordinates}
+            end={endCoordinates}
+            onRouteSelected={setRoute}
+          />
         </MapContainer>
+        <RouteDetails route={route} />
       </div>
     </div>
   );
