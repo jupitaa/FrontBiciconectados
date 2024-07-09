@@ -140,3 +140,21 @@
   border-radius: 3px; /* Bordes redondeados */
   padding: 5px; /* Espaciado interno */
 }
+.form-map {
+  width: 20%;
+  height: 15%;
+  box-sizing: border-box;
+  margin: 10px 50px;
+  padding: 10px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: absolute;
+
+  background: linear-gradient(180deg, #bef16a 39%, #94d726 74%);
+  border: 1px solid #000000;
+  border-radius: 13px;
+  z-index: 2000;
+}
