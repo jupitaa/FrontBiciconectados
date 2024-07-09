@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import ButtonLogin from "../buttons/ButtonLogin";
 
-export default function Header({ inicio, publicaciones, noticias }) {
+export default function Header() {
   const [menu, setMenu] = useState("inicio");
   const [logged, setLogged] = useState(false);
 

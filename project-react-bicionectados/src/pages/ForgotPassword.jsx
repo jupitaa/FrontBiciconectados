@@ -2,19 +2,14 @@ import React from "react";
 import "./Authentication.css";
 import DefaultButton from "../components/buttons/DefaultButton";
 import { Link } from "react-router-dom";
-const LoginPage = () => {
+const ForgotPässwordPage = () => {
   return (
     <div className="authenticaction-page">
       <div className="authentication-container">
         <div className="authentication-form">
-          <h2>Iniciar Sesión</h2>
+          <h2>Olvidaste tu Contraseña</h2>
           <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Contraseña" />
-          <DefaultButton button="Iniciar Sesion"></DefaultButton>
-          <div className="authentication-links">
-            <Link to={"/forgotpassword"}>o crea tu cuenta</Link>
-            <Link to="/register">¿Olvidaste tu contraseña?</Link>
-          </div>
+          <DefaultButton button="Enviar"></DefaultButton>
         </div>
       </div>
       <div className="authentication-greenside rightside">
@@ -25,4 +20,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default ForgotPässwordPage;

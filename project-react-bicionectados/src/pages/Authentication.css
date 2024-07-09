@@ -1,0 +1,59 @@
+/* Estilos para el contenedor principal de la página de inicio de sesión */
+.authenticaction-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+.authentication-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authentication-form {
+  width: 70%;
+  height: 60%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.authentication-form input {
+  width: 80%; /* Ancho con margen incluido */
+  padding: 10px; /* Espaciado interno */
+  margin: 10px 0; /* Margen superior e inferior */
+  border-radius: 4px; /* Bordes redondeados */
+  border: 1px solid rgba(102, 102, 102, 0.479); /* Borde gris claro */
+  background-color: rgb(255, 255, 255);
+}
+.authentication-form h2 {
+  font-size: 2.5em; /* Ancho con margen incluido */
+}
+.authentication-form a {
+  color: black;
+  margin: 20px;
+  font-weight: 500; /* Ancho con margen incluido */
+}
+
+.authentication-greenside {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #bef16a 39%, #94d726 74%);
+}
+.rightside {
+  border-radius: 100px 0px 0px 100px;
+  border-left: 2px solid rgba(0, 0, 0, 0.212);
+}
+.leftside {
+  border-radius: 0px 100px 100px 0px;
+  border-left: 2px solid rgba(0, 0, 0, 0.212);
+}
+.authentication-greenside img {
+  margin-top: 100px;
+}
