@@ -3,15 +3,13 @@
   background: var(--VerdePlano);
   display: flex;
   justify-content: center;
-  height: 70px;
-  position: sticky;
+  height: 80px;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 71%;
-  
 }
 .navbar > img {
   height: 35px;

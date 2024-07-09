@@ -9,13 +9,15 @@ import ForgotPässwordPage from "./pages/ForgotPassword";
 import Header from "./components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./pages/Footer";
+import Conocenos from "./pages/Conocenos";
 
 function App() {
   return (
     <>
-      <Header />
+       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/conocenos" element={<Conocenos/>} />
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/forgotpassword" element={<ForgotPässwordPage />}></Route>
@@ -24,7 +26,8 @@ function App() {
         <Route path="/eventos" element={<EventsPage />}></Route>
         <Route path="/perfil" element={<ProfilePage />}></Route>
       </Routes>
-      <Footer />
+      <Footer /> 
+  
     </>
   );
 }

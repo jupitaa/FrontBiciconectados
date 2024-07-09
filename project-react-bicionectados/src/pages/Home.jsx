@@ -2,6 +2,7 @@ import "./Pages.css";
 import { TbWorldHeart } from "react-icons/tb";
 import { IconContext } from "react-icons";
 import ButtonConocenos from "../components/buttons/ConocenosButton";
+import ConocenosButton from "../components/buttons/ConocenosButton";
 export default function Home() {
   return (
     <div className="home-background">
@@ -32,7 +33,7 @@ export default function Home() {
           <h5>UNETE, CONOCE AMIGOS Y DESCUBRE EL MUNDO</h5>
         </div>
         <div className="conocenos-container">
-          <ButtonConocenos />
+          <ConocenosButton />
         </div>
       </div>
     </div>

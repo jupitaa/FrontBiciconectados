@@ -12,8 +12,8 @@ const LoginPage = () => {
           <input type="password" placeholder="Contraseña" />
           <DefaultButton button="Iniciar Sesion"></DefaultButton>
           <div className="authentication-links">
-            <Link to={"/forgotpassword"}>o crea tu cuenta</Link>
-            <Link to="/register">¿Olvidaste tu contraseña?</Link>
+            <Link to={"/register"}>o crea tu cuenta</Link>
+            <Link to="/forgotpassword">¿Olvidaste tu contraseña?</Link>
           </div>
         </div>
       </div>
