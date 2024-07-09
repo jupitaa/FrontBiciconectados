@@ -7,6 +7,7 @@ import EventsPage from "./pages/EventsPage";
 import ProfilePage from "./pages/ProfilePage";
 import Header from "./components/Header/Header";
 import { Routes, Route } from "react-router-dom";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/eventos" element={<EventsPage />}></Route>
         <Route path="/perfil" element={<ProfilePage />}></Route>
       </Routes>
+      <Footer />
+      
     </>
   );
 }
