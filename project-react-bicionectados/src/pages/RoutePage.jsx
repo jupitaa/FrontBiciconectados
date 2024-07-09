@@ -1,54 +1,88 @@
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import L from "leaflet";
+import { useState } from "react";
+import "./Pages.css";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet-routing-machine";
-import { useEffect } from "react";
-import customIconUrl from "../assets/images/descargar.png";
-
-function RoutingMachine({ start, end, customIcon }) {
-  const map = useMap();
-
-  useEffect(() => {
-    const routingControl = L.Routing.control({
-      waypoints: [L.latLng(start[0], start[1]), L.latLng(end[0], end[1])],
-      createMarker: (i, waypoint) => {
-        return L.marker(waypoint.latLng, {
-          icon: customIcon,
-        });
-      },
-      routeWhileDragging: true,
-      serviceUrl: "https://router.project-osrm.org/route/v1",
-      show: false, // Ocultar el recuadro de instrucciones
-    }).addTo(map);
-
-    return () => map.removeControl(routingControl);
-  }, [map, start, end, customIcon]);
-
-  return null;
-}
+import RoutingMachine from "../components/MapComponents/RoutingMachine";
 
 export default function RoutePage() {
-  // Coordenadas de inicio y fin de la ruta
-  const start = [-33.459229, -70.645348]; // Ejemplo: Santiago de Chile
-  const end = [-33.456942, -70.648272]; // Ejemplo: otro punto en Santiago de Chile
-  const customIcon = new L.Icon({
-    iconUrl: customIconUrl,
-    iconSize: [38, 38], // size of the icon
-  });
+  // Coordenadas predeterminadas (Santiago de Chile)
+  const defaultStart = [-33.459229, -70.645348];
+  const defaultEnd = [-33.456942, -70.648272];
+
+  const [startCoordinates, setStartCoordinates] = useState(defaultStart);
+  const [endCoordinates, setEndCoordinates] = useState(defaultEnd);
+  const [startAddress, setStartAddress] = useState("");
+  const [endAddress, setEndAddress] = useState("");
+
+  const handleGeocode = async (e) => {
+    e.preventDefault();
+    try {
+      const startCoords = await getCoordinates(startAddress);
+      const endCoords = await getCoordinates(endAddress);
+      setStartCoordinates([startCoords.lat, startCoords.lon]);
+      setEndCoordinates([endCoords.lat, endCoords.lon]);
+    } catch (error) {
+      console.error("Error obteniendo coordenadas:", error);
+    }
+  };
 
   return (
-    <div style={{ width: "600px", height: "400px" }}>
-      <MapContainer
-        center={start}
-        zoom={13}
-        style={{ width: "100%", height: "100%" }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <RoutingMachine start={start} end={end} customIcon={customIcon} />
-      </MapContainer>
+    <div className="map-page">
+      <form onSubmit={handleGeocode}>
+        <div>
+          <label>
+            Dirección de inicio:
+            <input
+              type="text"
+              value={startAddress}
+              onChange={(e) => setStartAddress(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Dirección de destino:
+            <input
+              type="text"
+              value={endAddress}
+              onChange={(e) => setEndAddress(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <button type="submit">Buscar ruta</button>
+      </form>
+      <div className="map-page-container">
+        <MapContainer
+          center={defaultStart}
+          zoom={13}
+          style={{ width: "100%", height: "100%" }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <RoutingMachine start={startCoordinates} end={endCoordinates} />
+        </MapContainer>
+      </div>
     </div>
   );
+  async function getCoordinates(address) {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+        address
+      )}`
+    );
+    const data = await response.json();
+    if (data && data.length > 0) {
+      return {
+        lat: parseFloat(data[0].lat),
+        lon: parseFloat(data[0].lon),
+      };
+    } else {
+      throw new Error("No se encontraron coordenadas para esta dirección");
+    }
+  }
 }
