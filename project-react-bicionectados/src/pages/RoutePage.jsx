@@ -29,37 +29,35 @@ export default function RoutePage() {
 
   return (
     <div className="map-page">
-      <form onSubmit={handleGeocode}>
-        <div>
-          <label>
-            Dirección de inicio:
-            <input
-              type="text"
-              value={startAddress}
-              onChange={(e) => setStartAddress(e.target.value)}
-              required
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            Dirección de destino:
-            <input
-              type="text"
-              value={endAddress}
-              onChange={(e) => setEndAddress(e.target.value)}
-              required
-            />
-          </label>
-        </div>
-        <button type="submit">Buscar ruta</button>
-      </form>
       <div className="map-page-container">
         <MapContainer
           center={defaultStart}
           zoom={13}
           style={{ width: "100%", height: "100%" }}
         >
+          <form className="form-map" onSubmit={handleGeocode}>
+            <div>
+              <label>Dirección de inicio:</label>
+              <input
+                type="text"
+                value={startAddress}
+                onChange={(e) => setStartAddress(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label>
+                Dirección de destino:
+                <input
+                  type="text"
+                  value={endAddress}
+                  onChange={(e) => setEndAddress(e.target.value)}
+                  required
+                />
+              </label>
+            </div>
+            <button type="submit">Buscar ruta</button>
+          </form>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
