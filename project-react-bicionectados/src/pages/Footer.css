@@ -1,81 +1,84 @@
 .footer {
-    background-color: #0a0a0a;
-    color: white;
-    padding: 40px 20px; 
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-    align-items: flex-start; 
-  }
-  
-  .footer-section {
-    flex: 1 1 1 1; 
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .icon {
-    color: #35a82a; 
-    font-size: 50px; 
-    transition: color 0.3s;
-  }
-  
-  .icon:hover {
-    color: #c4dcce; 
-  }
-  .footer-section-contacto h2 {
-    font-size: 30px;
-  }
-  .footer-section-newsletter h3 {
-    font-size: 30px;
-  }
-  
-  .footer-section-contacto p {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 5px 0;
-    font-size: 20px;
-  }
+  background-color: #0a0a0a;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-  .footer-section-newsletter p {
-    font-size: 20px;
-  }
-  
-  .newsletter-input {
-    margin-top: 10px;
-    padding: 10px; /* Aumento del padding para un campo de entrada más grande */
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 100%; /* Ocupa todo el ancho disponible */
-  }
+.icon {
+  color: #35a82a;
+  font-size: 50px;
+  transition: color 0.3s;
+}
 
-  .newsletter-button {
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 4px; 
-    background-color: #21a441; 
-    color: white; 
-    cursor: pointer; /* Cursor de apuntador */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
-  }
-  
-  .newsletter-button:hover {
-    background-color: #ebf1f3;
-  }
-  
-  
-  .derechos {
-    margin-top: auto; 
-    font-size: 16px; 
-    text-align: center;
-  }
-  
- 
+.footer-section-comunidad,
+.footer-section-contacto,
+.footer-section-newsletter {
+  width: 30%;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.footer-section-comunidad > h2,
+.footer-section-contacto > h2,
+.footer-section-newsletter > h2 {
+  font-size: 30px;
+}
+
+.icon:hover {
+  color: #c4dcce;
+}
+
+.footer-section-contacto p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.footer-section-newsletter p {
+  font-size: 20px;
+}
+.newsletter-form {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+.newsletter-input {
+  padding: 10px; /* Aumento del padding para un campo de entrada más grande */
+  border-radius: 4px;
+  gap: 15px;
+  border: 1px solid #ccc;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.newsletter-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #21a441;
+  color: white;
+  cursor: pointer; /* Cursor de apuntador */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.newsletter-button:hover {
+  background-color: #ebf1f3;
+}
+
+.derechos {
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+}
