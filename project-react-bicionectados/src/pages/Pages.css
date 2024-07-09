@@ -21,13 +21,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
   padding: 0px;
   gap: 150px;
   width: 100%;
   margin: auto;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
 }
 .home-infoapp {
   margin-top: 35px;
@@ -115,4 +113,30 @@
   padding: 2px;
   display: flex;
   align-items: center;
+}
+.map-page {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-page-container {
+  width: 80%;
+  height: 80%;
+}
+.leaflet-routing-container {
+  background-color: #ffffff; /* Cambia el fondo a blanco */
+  border: 2px solid #000000; /* Bordes negros */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  font-family: Arial, sans-serif; /* Fuente personalizada */
+  color: #333333; /* Color del texto */
+}
+
+.leaflet-routing-alternatives-container {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  border: 1px solid #cccccc; /* Bordes grises */
+  border-radius: 3px; /* Bordes redondeados */
+  padding: 5px; /* Espaciado interno */
 }
