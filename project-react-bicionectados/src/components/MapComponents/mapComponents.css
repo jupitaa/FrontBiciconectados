@@ -1,0 +1,14 @@
+.map-route-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 15%;
+  border: 1px solid black;
+  background: var(--VerdePlano);
+}
+.detail-block {
+  display: flex;
+  gap: 15px;
+}
