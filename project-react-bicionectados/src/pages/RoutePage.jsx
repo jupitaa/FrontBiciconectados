@@ -4,6 +4,7 @@ import "./Pages.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet-routing-machine";
 import RoutingMachine from "../components/MapComponents/RoutingMachine";
+import DefaultButton from "../components/buttons/DefaultButton";
 
 export default function RoutePage() {
   // Coordenadas predeterminadas (Santiago de Chile)
@@ -36,27 +37,21 @@ export default function RoutePage() {
           style={{ width: "100%", height: "100%" }}
         >
           <form className="form-map" onSubmit={handleGeocode}>
-            <div>
-              <label>Dirección de inicio:</label>
-              <input
-                type="text"
-                value={startAddress}
-                onChange={(e) => setStartAddress(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label>
-                Dirección de destino:
-                <input
-                  type="text"
-                  value={endAddress}
-                  onChange={(e) => setEndAddress(e.target.value)}
-                  required
-                />
-              </label>
-            </div>
-            <button type="submit">Buscar ruta</button>
+            <label>Dirección de inicio:</label>
+            <input
+              type="text"
+              value={startAddress}
+              onChange={(e) => setStartAddress(e.target.value)}
+              required
+            />
+            <label>Dirección de destino:</label>
+            <input
+              type="text"
+              value={endAddress}
+              onChange={(e) => setEndAddress(e.target.value)}
+              required
+            />
+            <DefaultButton button="Buscar ruta"></DefaultButton>
           </form>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
