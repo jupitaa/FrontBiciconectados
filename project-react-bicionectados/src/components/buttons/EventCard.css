@@ -1,0 +1,52 @@
+.event-card {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.24);
+  gap: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 250px;
+  align-items: center;
+}
+
+.event-image {
+  width: 400px;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+.event-details h2 {
+  margin: 0;
+}
+.event-subtitle {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.option-button {
+  box-sizing: border-box;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: black;
+  border: 2px solid black;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.event-buttons-card {
+  display: flex;
+  gap: 8px;
+}

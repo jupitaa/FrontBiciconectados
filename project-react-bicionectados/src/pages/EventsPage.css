@@ -1,0 +1,48 @@
+.event-container {
+  gap: 20px;
+  margin: auto;
+  width: 80%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.event-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-buttons h2 {
+  margin: 0;
+}
+.create-event-button {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.eventcard-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+  width: 100%;
+  height: 100vh;
+}
+
+.events-container-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

@@ -1,0 +1,62 @@
+.sidebar-container {
+  
+  width: 25%;
+  padding-right: 16px;
+ }
+
+.filter-buttons {
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-button {
+  margin: 10px;
+  background-color: #e2e8f0; 
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.event-list {
+  gap: 16px;
+}
+/*
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.filter-button {
+  margin-left: 10px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event-card img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+}
