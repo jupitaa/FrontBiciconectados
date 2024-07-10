@@ -1,3 +1,4 @@
+/* General Styles */
 .footer {
   background-color: #0a0a0a;
   color: white;
@@ -6,6 +7,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -19,26 +22,29 @@
   cursor: pointer;
 }
 
+.icon:hover {
+  color: #c4dcce;
+}
+
+/* Footer Sections */
 .footer-section-comunidad,
 .footer-section-contacto,
 .footer-section-newsletter {
-  width: 30%;
+  width: 30%; /* Adjust width as needed */
   gap: 15px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
 }
+
 .footer-section-comunidad > h2,
 .footer-section-contacto > h2,
 .footer-section-newsletter > h2 {
   font-size: 30px;
 }
 
-.icon:hover {
-  color: #c4dcce;
-}
-
+/* Contact Section */
 .footer-section-contacto p {
   display: flex;
   align-items: center;
@@ -47,14 +53,17 @@
   font-size: 20px;
 }
 
+/* Newsletter Section */
 .footer-section-newsletter p {
   font-size: 20px;
 }
+
 .newsletter-form {
   width: 100%;
   display: flex;
   gap: 15px;
 }
+
 .newsletter-input {
   padding: 10px; /* Aumento del padding para un campo de entrada más grande */
   border-radius: 4px;
@@ -78,9 +87,50 @@
   color: black;
 }
 
+/* Derechos de Autor */
 .derechos {
   margin-top: 50px;
   font-size: 20px;
   text-align: center;
   width: 100%;
+}
+
+/* Responsive Styles (for screens smaller than 768px) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center elements horizontally on small screens */
+  }
+
+  .social-icons,
+  .footer-section-comunidad,
+  .footer-section-contacto,
+  .footer-section-newsletter {
+    width: 100%; /* Make sections full width on small screens */
+    margin-bottom: 20px; /* Add spacing between sections on small screens */
+  }
+
+  .footer-section-comunidad > h2,
+  .footer-section-contacto > h2,
+  .footer-section-newsletter > h2 {
+    font-size: 24px; /* Adjust heading size for smaller screens */
+  }
+
+  .footer-section-contacto p,
+  .footer-section-newsletter p {
+    font-size: 18px; /* Adjust paragraph size for smaller screens */
+  }
+
+  .newsletter-form {
+    flex-direction: column; /* Stack input and button on small screens */
+  }
+
+  .newsletter-input,
+  .newsletter-button {
+    width: 100%; /* Make input and button full width on small screens */
+  }
+
+  .derechos {
+    margin-top: 30px; /* Adjust margin for smaller screens */
+  }
 }
