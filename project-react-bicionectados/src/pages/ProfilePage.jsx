@@ -5,7 +5,7 @@ import {
   faMapMarkerAlt,
   faUsers,
   faBicycle,
-  faEdit 
+  faEdit,
 } from "@fortawesome/free-solid-svg-icons";
 import ButtonFriends from "../components/buttons/ButtonFriends";
 
@@ -76,7 +76,6 @@ function ProfilePage() {
         <button className="edit-profile-button">
           <FontAwesomeIcon icon={faEdit} /> Editar Perfil
         </button>
-        
       </div>
       <div className="container-2">
         <input
