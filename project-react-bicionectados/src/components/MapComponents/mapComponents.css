@@ -10,5 +10,21 @@
 }
 .detail-block {
   display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
+}
+@media (max-width: 768px) {
+  .react-icon {
+    height: 2em;
+  }
+}
+@media (max-width: 480px) {
+  .react-icon {
+    height: 2em;
+  }
+  .detail-block > p {
+    font-size: 0.7em;
+  }
 }

@@ -155,7 +155,7 @@
   width: 17%;
   height: 25%;
   box-sizing: border-box;
-  margin: 10px 10px;
+  margin: 5px 5px;
   padding: 10px;
   gap: 4px;
   display: flex;
@@ -245,6 +245,11 @@
     justify-content: center;
     order: 2;
   }
+  .form-map {
+    width: 40%;
+    height: auto;
+    margin: 5px 5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -277,16 +282,13 @@
     justify-content: start;
     font-size: 0.9em;
   }
+  .form-map {
+    width: 50%;
+  }
   .home-msg-container > h5 {
     margin: 0;
   }
 
-  .form-map {
-    width: 80%;
-    height: auto;
-    position: static;
-    margin: 10px auto;
-  }
   .leaflet-routing-container {
     padding: 5px;
   }
