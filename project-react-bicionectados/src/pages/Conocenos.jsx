@@ -45,7 +45,6 @@ function Conocenos() {
 
   return (
     <div>
-      <div className="rectangulo1"></div>
       <section className="section">
         <h1>QUIENES SOMOS</h1>
         <p>

@@ -1,13 +1,25 @@
 import ProfileNavBar from "./profilenavbar";
 import "./Header.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import ButtonLogin from "../buttons/ButtonLogin";
 
 export default function Header() {
   const [menu, setMenu] = useState("inicio");
   const [logged, setLogged] = useState(false);
-
+  const location = useLocation();
+  useEffect(() => {
+    const path = location.pathname;
+    if (
+      path !== "/" &&
+      path !== "/ruta" &&
+      path !== "/comunity" &&
+      path !== "/eventos" &&
+      path !== "/perfil"
+    ) {
+      setMenu("");
+    }
+  }, [location]);
   return (
     <header className="header">
       <nav className="navbar">

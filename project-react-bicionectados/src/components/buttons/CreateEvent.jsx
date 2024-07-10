@@ -2,7 +2,7 @@ import "./CreateEvent.css";
 
 const CreateEventForm = () => {
   return (
-    <form className="create-event-form">
+    <form className="create-event-form moveFromRightPanel">
       <h3>Crear evento</h3>
       <input type="text" placeholder="Nombre Evento" className="form-input" />
       <input type="text" placeholder="Descripción" className="form-input" />
@@ -19,9 +19,6 @@ const CreateEventForm = () => {
           className="form-input half-width"
         />
       </div>
-
-      
-      
 
       <button type="submit" className="form-button">
         Publicar

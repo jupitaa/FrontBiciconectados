@@ -4,7 +4,7 @@ import DefaultButton from "../components/buttons/DefaultButton";
 
 function RegisterPage() {
   return (
-    <div className="authenticaction-page">
+    <div className="authenticaction-page moveFromLeft">
       <div className="authentication-greenside leftside">
         <img width="700" src="src/assets/images/logobici.png" alt="logo" />
         <img

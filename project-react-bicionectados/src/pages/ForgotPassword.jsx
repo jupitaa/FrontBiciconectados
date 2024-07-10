@@ -4,7 +4,7 @@ import DefaultButton from "../components/buttons/DefaultButton";
 import { Link } from "react-router-dom";
 const ForgotPässwordPage = () => {
   return (
-    <div className="authenticaction-page">
+    <div className="authenticaction-page moveFromRight">
       <div className="authentication-container">
         <div className="authentication-form">
           <h2>Olvidaste tu Contraseña</h2>

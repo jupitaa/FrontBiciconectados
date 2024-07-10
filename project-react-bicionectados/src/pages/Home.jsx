@@ -1,15 +1,19 @@
 import "./Pages.css";
 import { TbWorldHeart } from "react-icons/tb";
 import { IconContext } from "react-icons";
-import ButtonConocenos from "../components/buttons/ConocenosButton";
+import { Count } from "react-price-animation";
 import ConocenosButton from "../components/buttons/ConocenosButton";
 export default function Home() {
   return (
-    <div className="home-background">
+    <div className="home-background ">
       <div class="background-image"></div>
-      <div className="home-page">
+      <div className="home-page moveFromLeft">
         <div className="home-infoapp">
-          <img src="./src/assets/images/8tVa.gif" alt="" />
+          <img
+            className="moveFromLeftimg"
+            src="./src/assets/images/8tVa.gif"
+            alt=""
+          />
           <IconContext.Provider value={{ size: "4em" }}>
             <p>
               <TbWorldHeart />
@@ -18,8 +22,13 @@ export default function Home() {
             </p>
           </IconContext.Provider>
           <div className="info-details">
-            <strong>300,040 km</strong>
-            <strong>1,200,321 kg</strong>
+            <strong>
+              <Count number={300040} height="40px" /> km
+            </strong>
+            <strong>
+              <Count number={1200321} height="40px" />
+              kg
+            </strong>
             <span>KM recorridos</span>
             <span>CO2 que evitamos</span>
           </div>

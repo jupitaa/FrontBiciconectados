@@ -14,7 +14,7 @@ import "./comunity.css";
 
 export default function Tema({ item }) {
   return (
-    <div className="tema-container">
+    <div className="tema-container moveFromBottomFade">
       <div className="tema-description center">
         <h3>{item.titulo}</h3>
         <p>{item.contenido}</p>
