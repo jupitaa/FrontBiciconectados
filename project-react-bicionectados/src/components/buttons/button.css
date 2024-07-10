@@ -1,13 +1,23 @@
 .btn-default {
-  width: 70%;
+  --primary-color: black;
+  --secondary-color: #fff;
+  --hover-color: rgb(62, 62, 62);
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
   box-sizing: border-box;
-  color: white;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
   display: flex;
+  transition: 0.2s background;
   align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
   justify-content: center;
-  padding: 12px;
-  gap: 8px;
-  background: #2c2c2c;
-  border: 1px solid #2c2c2c;
-  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-default:hover {
+  background-color: var(--hover-color);
 }
