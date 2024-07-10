@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   height: 80px;
+  font-weight: 700;
 }
 .navbar {
   display: flex;
@@ -31,7 +32,23 @@
   position: relative;
   font-size: 1.2em;
 }
-
+.navbar > .navbar-ul-responsive {
+  align-items: end;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background-color: var(--VerdePlano);
+  flex-direction: column;
+  width: 30%;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 100vmax 0 100vmax rgba(0, 0, 0, 0.5);
+}
 .profile-navbar {
   display: flex;
   flex-direction: row;
@@ -73,4 +90,91 @@
   width: calc(100% + var(--LineHeight));
   -webkit-animation: moveFromBottom 0.7s ease both;
   animation: moveFromBottom 0.7s ease both;
+}
+.menu-hambur {
+  display: none;
+}
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+  .navbar {
+    width: 85%;
+  }
+  .navbar > ul {
+    gap: 20px;
+  }
+  .navbar > ul > li > a {
+    font-size: 1em;
+  }
+  .profile-info {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-hambur {
+    display: block;
+  }
+  .login-home-btn {
+    display: none;
+  }
+  .header {
+    height: auto;
+    padding: 10px;
+  }
+  .navbar-ul-responsive.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-ul-responsive > li {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .navbar > ul > li {
+    width: 100%;
+    justify-content: end;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .navbar > .navbar-ul {
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+  }
+  .navbar > ul > li > a {
+    font-size: 0.9em;
+  }
+  .profile-navbar {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-hambur-close {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar {
+    align-items: center;
+    width: 100%;
+  }
+  .navbar > img {
+    height: 25px;
+  }
+
+  .navbar > ul > li > a {
+    font-size: 0.8em;
+  }
+  .profile-navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .profile-info {
+    align-items: center;
+    gap: 5px;
+  }
 }
