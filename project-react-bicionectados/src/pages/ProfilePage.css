@@ -15,7 +15,7 @@
   margin-bottom: 20px;
 }
 
-/* Foto de perfil  */
+/* Foto de perfil */
 .profile-foto img {
   border-radius: 50%;
   width: 150px;
@@ -25,19 +25,18 @@
   border: 3px solid #000000;
 }
 
-/* Nombre  */
+/* Nombre */
 .profile-info h1 {
   font-size: 40px;
   margin-bottom: 10px;
 }
-
-/* ubicacion */
+/* Ubicación */
 .profile-info p {
   font-size: 20px;
   color: #777e6d;
   margin-bottom: 5px;
   margin-top: 10px;
-  margin-right: 120px;
+  margin-right: 80px; /* Valor por defecto para pantallas grandes */
 }
 
 .profile-stats {
@@ -46,7 +45,7 @@
   margin-bottom: 20px;
 }
 
-/* seguidos... */
+/* Seguidos... */
 .profile-stat {
   text-align: center;
   border-radius: 10%;
@@ -61,22 +60,23 @@
   justify-content: center;
 }
 
-/* datos */
+/* Datos */
 .profile-stat p {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 1px;
   color: #000000;
 }
 
-/* texto km,seeguidores,siguiendo */
+/* Texto km, seguidores, siguiendo */
 .profile-stat span {
-  font-size: 20px;
+  font-size: 15px;
   color: #130707;
   font-weight: bold;
+  margin-top: -4px;
 }
 
-/* bio */
+/* Bio */
 .profile-bio {
   justify-content: space-between;
   display: flex;
@@ -84,7 +84,7 @@
   font-weight: bold;
 }
 
-/* barra negra */
+/* Barra negra */
 .edit-profile-button {
   background-color: #000000;
   color: #fff;
@@ -95,14 +95,18 @@
   font-size: 16px;
   display: inline-block;
   margin-top: 10px;
-  
 }
 
 .edit-profile-button:hover {
   background-color: #535c53;
-
 }
 
+/* Contenedor principal (responsivo) */
+.container-wrapper {
+  width: 100%;
+}
+
+/* Contenedor secundario (responsivo) */
 .container-2 {
   margin-top: 20px;
   padding: 20px;
@@ -110,31 +114,30 @@
   border-radius: 5px;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas en pantallas pequeñas */
 }
 
-/* Input para el estado */
+/* Input para el estado (responsivo) */
 .estado-input {
-  flex: 1;
+  flex: 1; /* Distribución flexible del espacio disponible */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Espacio inferior en pantallas pequeñas */
 }
 
-/* Botón  emojis */
+/* Botón emojis (responsivo) */
 .emoji-button {
   background-color: #ffffff;
   border: none;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-bottom: 10px; /* Espacio inferior en pantallas pequeñas */
 }
 
-/* Botón  enviar */
+/* Botón enviar (responsivo) */
 .enviar-button {
   background-color: #388e3c;
   color: #fff;
@@ -143,35 +146,43 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-bottom: 10px; /* Espacio inferior en pantallas pequeñas */
 }
 
-.enviar-button:hover {
-  background-color: #94d726;
-}
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 10px; /* Reducir el padding en pantallas pequeñas */
+  }
 
-/* Tarjeta para subir imágenes */
-.image-upload-card {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  text-align: center;
-}
+  .profile-foto img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
 
-.image-upload-card h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+  .profile-info h1 {
+    font-size: 30px;
+  }
 
-.image-upload-card input[type="file"] {
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  .profile-info p {
+    font-size: 16px;
+  }
+
+  .profile-stat {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-stat p,
+  .profile-stat span {
+    font-size: 16px;
+  }
+
+  .edit-profile-button {
+    font-size: 14px;
+  }
+
+  .container-2 {
+    padding: 10px;
+  }
 }

@@ -1,31 +1,38 @@
-
+/* Botón de amigos */
 .friends-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(141, 231, 123);
-    padding: 10px;
-    margin: 10px auto;
-    border: none;
-    border-radius: 50%;
-    background-color: #000;
-    cursor: pointer;
-    font-size: 24px;
-    width: 60px;
-    transition: color 0.3s ease;
-    text-align: center;
-    margin-right: -40px;
-    margin-top: -50px;
-    display: inline-flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(141, 231, 123);
+  padding: 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+  font-size: 24px;
+  width: 60px;
+  transition: color 0.3s ease;
+  text-align: center;
+  margin-right: -40px;
+  margin-top: -50px;
+}
+
+.friends-button:hover {
+  color: #384d35;
+}
+
+.friends-button svg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .friends-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-right: 0;
+    margin-top: 0;
   }
-  
-  .friends-button:hover {
-    color: #384d35;
-  }
-  
-  .friends-button svg {
-    width: 100%;
-    height: auto;
-  }
-  
+}

@@ -3,11 +3,18 @@ import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ButtonLogin from "../buttons/ButtonLogin";
+import { FaBars } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 export default function Header() {
   const [menu, setMenu] = useState("inicio");
   const [logged, setLogged] = useState(false);
+  const [navbar, setnavbar] = useState(false);
   const location = useLocation();
+  const handleToggleNavBar = () => {
+    setnavbar((prevState) => !prevState);
+  };
+
   useEffect(() => {
     const path = location.pathname;
     if (
@@ -24,14 +31,14 @@ export default function Header() {
     <header className="header">
       <nav className="navbar">
         <img src="./src/assets/images/logobici.png" alt="logo" />
-        <ul>
+        <ul className="navbar-ul">
           <li>
             <Link
               to="/"
               onClick={() => setMenu("inicio")}
               className={menu === "inicio" ? "active" : ""}
             >
-              Inicio
+              INICIO
             </Link>
           </li>
           <li>
@@ -40,7 +47,7 @@ export default function Header() {
               className={menu === "ruta" ? "active" : ""}
               onClick={() => setMenu("ruta")}
             >
-              Ruta
+              RUTA
             </Link>
           </li>
           <li>
@@ -49,7 +56,7 @@ export default function Header() {
               className={menu === "comunity" ? "active" : ""}
               onClick={() => setMenu("comunity")}
             >
-              Comunidad
+              COMUNIDAD
             </Link>
           </li>
           <li>
@@ -58,24 +65,57 @@ export default function Header() {
               className={menu === "eventos" ? "active" : ""}
               onClick={() => setMenu("eventos")}
             >
-              Eventos
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/perfil"
-              onClick={() => setMenu("perfil")}
-              className={menu === "perfil" ? "active" : ""}
-            >
-              Perfil
+              EVENTOS
             </Link>
           </li>
         </ul>
-        {logged === true ? (
-          <ProfileNavBar name="Usuario" status="En línea" />
-        ) : (
-          <ButtonLogin />
-        )}
+        <ul
+          className={
+            navbar
+              ? "navbar-ul-responsive visible moveFromTop "
+              : "navbar-ul-responsive"
+          }
+        >
+          <button className="menu-hambur-close" onClick={handleToggleNavBar}>
+            <IoMdClose />
+          </button>
+          <li>
+            <Link to="/" onClick={() => setMenu("inicio")}>
+              INICIO
+            </Link>
+          </li>
+          <li>
+            <Link to="/ruta" onClick={() => setMenu("ruta")}>
+              RUTA
+            </Link>
+          </li>
+          <li>
+            <Link to="/comunity" onClick={() => setMenu("comunity")}>
+              COMUNIDAD
+            </Link>
+          </li>
+          <li>
+            <Link to="/eventos" onClick={() => setMenu("eventos")}>
+              EVENTOS
+            </Link>
+          </li>
+          <li>
+            <Link to="/login" onClick={() => setMenu("iniciarsesion")}>
+              INICIAR SESION
+            </Link>
+          </li>
+        </ul>
+        <div className="login-home-btn">
+          {logged === true ? (
+            <ProfileNavBar name="Usuario" status="En línea" />
+          ) : (
+            <ButtonLogin />
+          )}
+        </div>
+
+        <button className="menu-hambur" onClick={handleToggleNavBar}>
+          <FaBars />
+        </button>
       </nav>
     </header>
   );
