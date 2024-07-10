@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CreateEvent from "../components/buttons/CreateEvent";
-import Sidebar from "../components/buttons/Sidebar";
 import "./EventsPage.css";
 import EventCard from "../components/buttons/EventCard";
 
@@ -26,19 +25,21 @@ export default function EventPage() {
       <div className="events-container-column">
       <EventCard
         imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
-        title="Ciclismo en Parque Forestal"
-        description="Wena los kauros nos vamoa juntar a cletear Wena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletear"
+        title="Cicletada en Parque Forestal"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi facilis laboriosam consectetur dolor culpa consequuntur quod, aperiam in sint ea magni dolores. Nihil consectetur vero labore, laborum eius nemo."
         details="Sáb 10:00 AM · 24 interesados"
       />
       <EventCard
         imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
-        title="Ciclismo en Parque Forestal"
-        description="Wena los kauros nos vamoa juntar a cletear Wena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletearWena los kauros nos vamoa juntar a cletear"
+        title="Cicletada en Parque Forestal"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi facilis laboriosam consectetur dolor culpa consequuntur quod, aperiam in sint ea magni dolores. Nihil consectetur vero labore, laborum eius nemo."
         details="Sáb 10:00 AM · 24 interesados"
       />
       </div>
       {showCreateEvent && <CreateEvent />}
        </div>
+
+       
      
       
       
