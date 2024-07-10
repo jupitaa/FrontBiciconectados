@@ -1,41 +1,42 @@
 import React, { useState } from "react";
 import "./ProfilePage.css";
-import DefaultButton from "../components/buttons/DefaultButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
   faUsers,
   faBicycle,
+  faEdit 
 } from "@fortawesome/free-solid-svg-icons";
+import ButtonFriends from "../components/buttons/ButtonFriends";
 
-const Profile = () => {
-  const [user] = useState({
+function ProfilePage() {
+  const user = {
     name: "CarlosClaudios xxx",
     location: "Independencia, CL",
     bio: "Musica | Coffee Lover | CatLover | LOL",
     seguidores: 1,
     siguiendo: 3,
     kilometers: 0,
-  });
+  };
 
   const [estado, setEstado] = useState("");
 
-  const handleEstadoChange = (e) => {
+  function handleEstadoChange(e) {
     setEstado(e.target.value);
-  };
+  }
 
-  const handleEnviarClick = () => {
+  function handleEnviarClick() {
     console.log(`Estado enviado: ${estado}`);
-  };
+  }
 
-  const handleEmojiClick = (emoji) => {
+  function handleEmojiClick(emoji) {
     setEstado(estado + emoji);
-  };
+  }
 
-  const handleUpload = (event) => {
+  function handleUpload(event) {
     const file = event.target.files[0];
     console.log("Subiendo archivo:", file);
-  };
+  }
 
   return (
     <div className="profile-page">
@@ -45,10 +46,10 @@ const Profile = () => {
         </div>
         <div className="profile-info">
           <h1>{user.name}</h1>
-          <p>{user.email}</p>
           <p>
             <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" /> {user.location}
           </p>
+          <ButtonFriends />
         </div>
       </div>
       <div className="profile-stats">
@@ -72,7 +73,9 @@ const Profile = () => {
         <p>{user.bio}</p>
       </div>
       <div className="profile-buttons">
-        <DefaultButton button="Editar Perfil" />
+        <button className="edit-profile-button">
+          <FontAwesomeIcon icon={faEdit} /> Editar Perfil
+        </button>
         
       </div>
       <div className="container-2">
@@ -96,6 +99,6 @@ const Profile = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Profile;
+export default ProfilePage;

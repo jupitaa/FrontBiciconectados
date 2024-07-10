@@ -10,14 +10,15 @@ import Header from "./components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./pages/Footer";
 import Conocenos from "./pages/Conocenos";
+import Friends from "./pages/Friends";
 
 function App() {
   return (
     <>
-       <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/conocenos" element={<Conocenos/>} />
+        <Route path="/conocenos" element={<Conocenos />} />
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/forgotpassword" element={<ForgotPässwordPage />}></Route>
@@ -25,8 +26,9 @@ function App() {
         <Route path="/comunity" element={<ComunityPage />}></Route>
         <Route path="/eventos" element={<EventsPage />}></Route>
         <Route path="/perfil" element={<ProfilePage />}></Route>
+        <Route path="/friends" element={<Friends />}></Route>
       </Routes>
-      <Footer /> 
+      <Footer />
     </>
   );
 }
