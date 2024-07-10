@@ -39,3 +39,7 @@
   justify-content: space-around;
   width: 30%;
 }
+.moveFromBottomFade {
+  -webkit-animation: moveFromBottomFade 0.7s ease both;
+  animation: moveFromBottomFade 0.7s ease both;
+}

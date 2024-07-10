@@ -71,4 +71,6 @@
 }
 .navbar > ul > li > a.active:before {
   width: calc(100% + var(--LineHeight));
+  -webkit-animation: moveFromBottom 0.7s ease both;
+  animation: moveFromBottom 0.7s ease both;
 }

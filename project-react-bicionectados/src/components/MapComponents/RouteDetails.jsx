@@ -28,7 +28,7 @@ const RouteDetails = ({ route }) => {
   const timeformat = route.summary.totalTime / 60;
   const carFootprint = calculateCarbonFootprint(kmformat, "car");
   return (
-    <div className="map-route-details">
+    <div className="map-route-details scaleUp">
       <IconContext.Provider value={{ size: "3em" }}>
         <div className="detail-block">
           <FaRoute />

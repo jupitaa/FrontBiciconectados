@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function ConocenosButton() {
   return (
     <Link to="/conocenos" className="conocenos-button">
-      Conocenos <FaRegArrowAltCircleRight />
+      Conócenos <FaRegArrowAltCircleRight />
     </Link>
   );
 }

@@ -6,6 +6,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #ffffff;
+  animation: fadeInAnimation ease 1s;
 }
 
 .profile-header {
@@ -36,6 +37,7 @@
   color: #777e6d;
   margin-bottom: 5px;
   margin-top: 10px;
+  margin-right: 120px;
 }
 
 .profile-stats {
@@ -52,7 +54,7 @@
   height: 150px;
   margin-top: 20px;
   border: 3px solid #000000;
-  background-color: #94d726;
+  background-color: #abde53;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,13 +85,22 @@
 }
 
 /* barra negra */
-.profile-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px 10px;
-  gap: 50px;
+.edit-profile-button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 10px;
+  
+}
+
+.edit-profile-button:hover {
+  background-color: #535c53;
+
 }
 
 .container-2 {

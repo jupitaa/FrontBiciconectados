@@ -32,13 +32,13 @@ export default function RoutePage() {
 
   return (
     <div className="map-page">
-      <div className="map-page-container">
+      <div className="map-page-container scaleUp">
         <MapContainer
           center={defaultStart}
           zoom={13}
           style={{ width: "100%", height: "100%" }}
         >
-          <form className="form-map" onSubmit={handleGeocode}>
+          <form className="form-map moveFromTop" onSubmit={handleGeocode}>
             <label>Dirección de inicio:</label>
             <input
               type="text"
