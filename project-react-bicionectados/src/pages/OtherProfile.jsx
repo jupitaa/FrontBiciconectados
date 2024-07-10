@@ -15,27 +15,9 @@ const Profile = () => {
     bio: "Musica | Coffee Lover | CatLover | LOL",
     seguidores: 1,
     siguiendo: 3,
-    kilometers: 0,
+    kilometers: 3500,
   });
 
-  const [estado, setEstado] = useState("");
-
-  const handleEstadoChange = (e) => {
-    setEstado(e.target.value);
-  };
-
-  const handleEnviarClick = () => {
-    console.log(`Estado enviado: ${estado}`);
-  };
-
-  const handleEmojiClick = (emoji) => {
-    setEstado(estado + emoji);
-  };
-
-  const handleUpload = (event) => {
-    const file = event.target.files[0];
-    console.log("Subiendo archivo:", file);
-  };
 
   return (
     <div className="profile-page">
@@ -72,27 +54,8 @@ const Profile = () => {
         <p>{user.bio}</p>
       </div>
       <div className="profile-buttons">
-        <DefaultButton button="Editar Perfil" />
-        
-      </div>
-      <div className="container-2">
-        <input
-          type="text"
-          placeholder="Estado..."
-          className="estado-input"
-          value={estado}
-          onChange={handleEstadoChange}
-        />
-        <button className="emoji-button" onClick={() => handleEmojiClick("🙂")}>
-          🙂
-        </button>
-        <button className="enviar-button" onClick={handleEnviarClick}>
-          Enviar
-        </button>
-      </div>
-      <div className="image-upload-card">
-        <h2>Subir Imágenes</h2>
-        <input type="file" onChange={handleUpload} />
+        <DefaultButton button="Seguir" />
+        <DefaultButton button="Bloquear" />
       </div>
     </div>
   );

@@ -1,0 +1,166 @@
+/* Estilos para la página de perfil */
+.profile-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Foto de perfil  */
+.profile-foto img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #000000;
+}
+
+/* Nombre  */
+.profile-info h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* ubicacion */
+.profile-info p {
+  font-size: 20px;
+  color: #777e6d;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* seguidos... */
+.profile-stat {
+  text-align: center;
+  border-radius: 10%;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  border: 3px solid #000000;
+  background-color: #94d726;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* datos */
+.profile-stat p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #000000;
+}
+
+/* texto km,seeguidores,siguiendo */
+.profile-stat span {
+  font-size: 20px;
+  color: #130707;
+  font-weight: bold;
+}
+
+/* bio */
+.profile-bio {
+  justify-content: space-between;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* barra negra */
+.profile-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  gap: 50px;
+}
+
+.container-2 {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Input para el estado */
+.estado-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Botón  emojis */
+.emoji-button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Botón  enviar */
+.enviar-button {
+  background-color: #388e3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.enviar-button:hover {
+  background-color: #94d726;
+}
+
+/* Tarjeta para subir imágenes */
+.image-upload-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.image-upload-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.image-upload-card input[type="file"] {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
