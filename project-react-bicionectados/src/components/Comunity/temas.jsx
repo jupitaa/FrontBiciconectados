@@ -1,14 +1,23 @@
 import "./comunity.css";
 
-export default function Tema() {
+/*
+{
+  "id": 1,
+  "titulo": "Mi primera publicación",
+  "contenido": "Contenido de mi publicación",
+  "likes": [],
+  "comentarios": [],
+  "usuario": null
+},
+
+*/
+
+export default function Tema({ item }) {
   return (
     <div className="tema-container">
       <div className="tema-description center">
-        <h3>Titulo</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <h3>{item.titulo}</h3>
+        <p>{item.contenido}</p>
       </div>
       <div className="tema-info center">
         <span>Comentarios:</span>
