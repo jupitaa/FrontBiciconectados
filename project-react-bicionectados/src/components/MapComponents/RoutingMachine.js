@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 const createRoutineMachineLayer = ({ start, end, onRouteSelected }) => {
   const map = useMap();
+
   useEffect(() => {
     if (!map) return;
 
@@ -35,6 +36,16 @@ const createRoutineMachineLayer = ({ start, end, onRouteSelected }) => {
     if (itineraryContainer) {
       itineraryContainer.style.display = "none";
     }
+    const circle = L.circle([-33.433994388953856, -70.64560427481474], {
+      color: "red",
+      radius: 150,
+    }).addTo(map);
+    const circle2 = L.circle([-33.4278816465382, -70.63631736075976], {
+      color: "yellow",
+      radius: 200,
+    }).addTo(map);
+    circle.bindPopup("Zona Peligrosa.");
+    circle2.bindPopup("Zona de riesgo de accidentes.");
     return () => map.removeControl(routingControl);
   }, [map, start, end, onRouteSelected]);
   return null;
