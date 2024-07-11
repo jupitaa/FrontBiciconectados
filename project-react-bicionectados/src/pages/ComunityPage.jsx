@@ -3,7 +3,6 @@ import axios from "axios";
 import Temas from "../components/Comunity/temas";
 import DropdownButton from "../components/buttons/FilterButton";
 import "./Pages.css";
-
 const client = axios.create({
   baseURL: "http://localhost:8080/publicaciones/lista",
 });
@@ -30,11 +29,18 @@ export default function ComunityPage() {
         <div className="filter-button">
           <div className="filter">
             <DropdownButton />
-            <div className="create-thread-btn">
-              <button>Nueva publicación</button>
-            </div>
+          </div>
+          <div className="create-thread-btn">
+            <button>Nueva publicación</button>
           </div>
         </div>
+
+        <Temas
+          item={{
+            titulo: "Necesito consejos para una bicicleta",
+            contenido: "por favor te chupáre el pene amigo",
+          }}
+        ></Temas>
         {publicaciones &&
           publicaciones.map((item) => (
             <div key={item.id}>

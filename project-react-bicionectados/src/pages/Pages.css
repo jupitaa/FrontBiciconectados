@@ -96,13 +96,14 @@
 }
 .adjust-page {
   width: 70%;
-  height: 100vh;
+  height: auto;
   margin: 50px auto;
 }
 .grid-temas {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100vh;
 }
 .filter-button {
   border-radius: 5px;
