@@ -3,6 +3,7 @@ import axios from "axios";
 import Temas from "../components/Comunity/temas";
 import DropdownButton from "../components/buttons/FilterButton";
 import "./Pages.css";
+
 const client = axios.create({
   baseURL: "http://localhost:8080/publicaciones/lista",
 });
