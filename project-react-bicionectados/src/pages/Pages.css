@@ -190,14 +190,25 @@
   -webkit-animation: moveFromLeftmore 5s ease both;
   animation: moveFromLeftmore 5s ease both;
 }
+@media (max-width: 1500px) {
+  .home-msg-container {
+    width: 35%;
+  }
+}
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
   .background-image {
     display: none;
   }
+  .home-infoapp {
+    height: 55vh;
+    order: 1;
+  }
   .home-page {
     flex-direction: column;
     gap: 50px;
+    align-items: center;
+    gap: 20px;
     height: auto;
     background: white;
   }
@@ -209,10 +220,18 @@
     margin-top: 20px;
   }
   .home-msg-container {
-    width: 80%;
+    justify-content: start;
+    text-align: center;
+    width: auto;
+    margin: 50px;
+    height: auto;
+    font-size: 2em;
   }
   .conocenos-container {
-    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    justify-content: center;
+    order: 2;
   }
 }
 
