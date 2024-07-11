@@ -55,9 +55,9 @@
   background: #2c2c2c;
   color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 1330px) {
   .event-card {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     align-items: flex-start;
   }
@@ -77,10 +77,34 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .event-card {
+    flex-direction: row;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .event-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .event-details {
+    width: 100%;
+  }
+
+  .option-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 680px) {
+  .event-card {
+    flex-direction: column;
     padding: 10px;
     gap: 10px;
+    height: auto;
+    font-size: 0.8em;
   }
 
   .event-details h2 {
@@ -94,5 +118,9 @@
   .option-button {
     height: 40px;
     font-size: 0.7em;
+  }
+
+  .event-image {
+    display: none;
   }
 }
