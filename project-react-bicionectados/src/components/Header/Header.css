@@ -98,11 +98,21 @@
 
 .navbar > ul > li > a.active:before {
   width: calc(100% + var(--LineHeight));
-  -webkit-animation: moveFromBottom 0.7s ease both;
-  animation: moveFromBottom 0.7s ease both;
+  -webkit-animation: moveFromBottom 0.2s ease both;
+  animation: moveFromBottom 0.2s ease both;
 }
 .menu-hambur {
   display: none;
+  background: transparent;
+  border: 0;
+  color: black;
+  cursor: pointer;
+}
+.menu-hambur-close {
+  color: white;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 .navbar-ul-responsive li a {
   color: white;

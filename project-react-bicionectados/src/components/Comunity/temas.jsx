@@ -1,5 +1,5 @@
 import "./comunity.css";
-
+import { useNavigate } from "react-router-dom";
 /*
 {
   "id": 1,
@@ -13,17 +13,26 @@ import "./comunity.css";
 */
 
 export default function Tema({ item }) {
+  const navigate = useNavigate();
+
+  const handleCommentsClick = () => {
+    navigate("/comments");
+  };
+
   return (
-    <div className="tema-container moveFromBottomFade">
+    <div
+      onClick={handleCommentsClick}
+      className="tema-container moveFromBottomFade"
+    >
       <div className="tema-description center">
         <h3>{item.titulo}</h3>
         <p>{item.contenido}</p>
       </div>
       <div className="tema-info center">
-        <span>Comentarios:</span>
-        <span>9999</span>
-        <span>Visto:</span>
-        <span>9999</span>
+        <span>Comentarios</span>
+        <span>4</span>
+        <span>Visto</span>
+        <span>25</span>
       </div>
       <div className="tema-autor center">
         <strong>Autor</strong>

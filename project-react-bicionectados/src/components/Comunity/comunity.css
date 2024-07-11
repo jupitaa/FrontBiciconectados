@@ -8,9 +8,20 @@
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.24);
   border-radius: 10px;
 }
+.tema-container.comment {
+  background-color: rgb(243, 243, 243);
+}
 .tema-description {
   padding: 5px;
   width: 50%;
+}
+.principal {
+  height: 200px;
+}
+.tema-description.comment {
+  width: 80%;
+  height: 100%;
+  padding: 10px;
 }
 .tema-description > h3 {
   width: 100%;
@@ -39,7 +50,102 @@
   justify-content: space-around;
   width: 30%;
 }
+.tema-container.comment.comentariocontent {
+  height: 100px;
+  background: var(--VerdePlano);
+  justify-content: space-between;
+  gap: 15px;
+}
+.tema-container.comment.comentariocontent > .tema-autor {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.tema-autor > button {
+  width: 100%;
+  height: 80%;
+  border: 0;
+  background: black;
+  color: white;
+  border-radius: 25px;
+}
+.tema-autor > button:hover {
+  cursor: pointer;
+  background: rgb(63, 63, 63);
+  color: white;
+}
+.tema-description.comment.comentario {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.tema-description.comment.comentario > textarea {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 5px;
+}
+.commentario {
+  width: 100%;
+  height: 70%;
+  padding: 0;
+  border: 1px solid black;
+}
 .moveFromBottomFade {
   -webkit-animation: moveFromBottomFade 0.7s ease both;
   animation: moveFromBottomFade 0.7s ease both;
+}
+@media (max-width: 700px) {
+  .principal {
+    height: 150px;
+  }
+  .tema-container.comment {
+    height: 100px;
+  }
+  .tema-description > h3 {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 1em;
+  }
+  .tema-description > p {
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+  }
+  .tema-autor {
+    font-size: 1em;
+    align-items: start;
+  }
+}
+@media (max-width: 450px) {
+  .principal {
+    height: 120px;
+  }
+  .tema-container {
+    height: 90px;
+  }
+  .tema-container.comment {
+    height: 90px;
+  }
+  .tema-description > h3 {
+    font-size: 0.8em;
+  }
+  .tema-description > p {
+    font-size: 0.8em;
+  }
+  .tema-autor {
+    font-size: 0.8em;
+  }
+  .tema-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tema-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+    font-weight: 800;
+  }
 }

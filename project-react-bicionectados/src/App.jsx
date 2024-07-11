@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./pages/Footer";
 import Conocenos from "./pages/Conocenos";
 import Friends from "./pages/Friends";
+import ComunityPageComment from "./pages/ComunityPageComments";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPässwordPage />}></Route>
         <Route path="/ruta" element={<RoutePage />}></Route>
         <Route path="/comunity" element={<ComunityPage />}></Route>
+        <Route path="/comments" element={<ComunityPageComment />}></Route>
         <Route path="/eventos" element={<EventsPage />}></Route>
         <Route path="/perfil" element={<ProfilePage />}></Route>
         <Route path="/amigos" element={<Friends />}></Route>
