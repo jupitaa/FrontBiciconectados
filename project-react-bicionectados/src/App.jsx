@@ -26,7 +26,7 @@ function App() {
         <Route path="/comunity" element={<ComunityPage />}></Route>
         <Route path="/eventos" element={<EventsPage />}></Route>
         <Route path="/perfil" element={<ProfilePage />}></Route>
-        <Route path="/friends" element={<Friends />}></Route>
+        <Route path="/amigos" element={<Friends />}></Route>
       </Routes>
       <Footer />
     </>

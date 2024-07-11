@@ -8,7 +8,7 @@ function ButtonFriends() {
   const navigate = useNavigate();
 
   function goToFriends() {
-    navigate('/friends');
+    navigate('/amigos');
   }
 
   return (
