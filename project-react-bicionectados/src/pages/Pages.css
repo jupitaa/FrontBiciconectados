@@ -192,10 +192,14 @@
 }
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
+  .background-image {
+    display: none;
+  }
   .home-page {
     flex-direction: column;
     gap: 50px;
     height: auto;
+    background: white;
   }
   .info-details {
     width: 90%;
@@ -213,13 +217,9 @@
 }
 
 @media (max-width: 768px) {
-  .background-image {
-    display: none;
-  }
   .home-page {
     align-items: center;
     gap: 20px;
-    background: white;
   }
   .home-infoapp {
     height: 55vh;
