@@ -9,9 +9,9 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 71%;
+  width: 100%;
 }
 
 .navbar > img {
@@ -105,22 +105,13 @@
   display: none;
 }
 /* Media Queries para Responsividad */
-@media (max-width: 1200px) {
-  .navbar {
-    width: 85%;
-  }
-  .navbar > ul {
-    gap: 20px;
-  }
-  .navbar > ul > li > a {
-    font-size: 1em;
-  }
+@media (max-width: 1300px) {
   .profile-info {
     align-items: center;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .menu-hambur {
     display: block;
   }
@@ -148,6 +139,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    justify-content: space-between;
   }
   .navbar > .navbar-ul {
     flex-direction: column;

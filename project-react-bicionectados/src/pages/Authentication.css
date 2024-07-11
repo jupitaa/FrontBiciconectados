@@ -57,6 +57,50 @@
 .authentication-greenside img {
   margin-top: 100px;
 }
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+  .authentication-page {
+    margin: auto;
+    height: 100vh;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+  .authentication-container {
+    width: 100%;
+  }
+  .authentication-form h2 {
+    font-size: 2em; /* Reducir el tamaño de la fuente */
+  }
+  .authentication-form input {
+    width: 100%; /* Ancho con margen incluido */
+  }
+  .authentication-greenside {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .authenticaction-page {
+    flex-direction: column;
+  }
+  .authentication-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .authentication-form h2 {
+    font-size: 1.5em; /* Reducir el tamaño de la fuente */
+  }
+  .authentication-form input {
+    width: 95%; /* Ancho con margen incluido */
+  }
+  .authentication-form a {
+    font-size: 0.8em;
+    margin: 10px; /* Reducir el margen */
+  }
+}
 .moveFromLeft {
   -webkit-animation: moveFromLeft 0.6s ease both;
   animation: moveFromLeft 0.6s ease both;

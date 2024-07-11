@@ -1,4 +1,4 @@
-/* FriendsList.css */
+/* Friends.css */
 
 .friends-page {
   max-width: 800px;
@@ -37,4 +37,27 @@
   font-size: 16px;
   font-weight: bold;
   color: #333;
+}
+
+/* Estilo para el botón de retroceso */
+.back-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
+
+.back-button svg {
+  font-size: 24px;
 }

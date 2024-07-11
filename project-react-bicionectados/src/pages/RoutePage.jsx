@@ -1,19 +1,23 @@
 import "leaflet/dist/leaflet.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Pages.css";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "leaflet-routing-machine";
 import RoutingMachine from "../components/MapComponents/RoutingMachine";
 import DefaultButton from "../components/buttons/DefaultButton";
 import RouteDetails from "../components/MapComponents/RouteDetails";
+import { useLocation } from "react-router-dom";
 
 export default function RoutePage() {
-  // Coordenadas predeterminadas (Santiago de Chile)
-  const defaultStart = [-33.459229, -70.645348];
-  const defaultEnd = [-33.456942, -70.648272];
+  const location = useLocation();
+  const defaultstart = [-33.42535557964055, -70.64013933574407];
+  const defaultend = [-33.434635397659996, -70.64255738453193];
+  const { inicio, destino } = location.state || {};
 
-  const [startCoordinates, setStartCoordinates] = useState(defaultStart);
-  const [endCoordinates, setEndCoordinates] = useState(defaultEnd);
+  const [startCoordinates, setStartCoordinates] = useState(
+    inicio || defaultstart
+  );
+  const [endCoordinates, setEndCoordinates] = useState(destino || defaultend);
   const [startAddress, setStartAddress] = useState("");
   const [endAddress, setEndAddress] = useState("");
   const [route, setRoute] = useState(null);
@@ -34,7 +38,7 @@ export default function RoutePage() {
     <div className="map-page">
       <div className="map-page-container scaleUp">
         <MapContainer
-          center={defaultStart}
+          center={inicio}
           zoom={13}
           style={{ width: "100%", height: "100%" }}
         >

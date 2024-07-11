@@ -29,7 +29,7 @@ const RouteDetails = ({ route }) => {
   const carFootprint = calculateCarbonFootprint(kmformat, "car");
   return (
     <div className="map-route-details scaleUp">
-      <IconContext.Provider value={{ size: "3em" }}>
+      <IconContext.Provider value={{ size: "3em", className: "react-icon" }}>
         <div className="detail-block">
           <FaRoute />
           <p>Distancia: {kmformat.toFixed(2)} km</p>
