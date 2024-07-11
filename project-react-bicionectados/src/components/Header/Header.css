@@ -47,12 +47,12 @@
   top: 0;
   right: 0;
   z-index: 5;
-  background-color: var(--VerdePlano);
+  background-color: hsla(0, 0%, 0%, 0.9);
   flex-direction: column;
   width: 30%;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 100vmax 0 100vmax rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 200vmax rgba(0, 0, 0, 0.5);
 }
 .profile-navbar {
   display: flex;
@@ -104,6 +104,12 @@
 .menu-hambur {
   display: none;
 }
+.navbar-ul-responsive li a {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
   .navbar {

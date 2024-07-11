@@ -1,7 +1,8 @@
-import "./Pages.css";
-import Temas from "../components/Comunity/temas";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import Temas from "../components/Comunity/temas";
+import DropdownButton from "../components/buttons/FilterButton";
+import "./Pages.css";
 
 const client = axios.create({
   baseURL: "http://localhost:8080/publicaciones/lista",
@@ -9,10 +10,18 @@ const client = axios.create({
 
 export default function ComunityPage() {
   const [publicaciones, setPublicaciones] = useState(null);
+
   useEffect(() => {
-    client.get().then((response) => {
-      setPublicaciones(response.data.reverse());
-    });
+    const fetchData = async () => {
+      try {
+        const response = await client.get();
+        setPublicaciones(response.data.reverse());
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -20,10 +29,11 @@ export default function ComunityPage() {
       <div className="grid-temas">
         <div className="filter-button">
           <div className="filter">
-            <strong>Ordenar por</strong>
-            <button></button>
+            <DropdownButton />
+            <div className="create-thread-btn">
+              <button>Nueva publicación</button>
+            </div>
           </div>
-          <button></button>
         </div>
         {publicaciones &&
           publicaciones.map((item) => (
