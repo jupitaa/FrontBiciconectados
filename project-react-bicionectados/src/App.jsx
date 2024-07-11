@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import Home from "./pages/Home";
@@ -14,13 +15,17 @@ import Friends from "./pages/Friends";
 import ComunityPageComment from "./pages/ComunityPageComments";
 
 function App() {
+  const [login, setLogin] = useState(null);
   return (
     <>
-      <Header />
+      <Header key={`login-${login}`} />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/conocenos" element={<Conocenos />} />
-        <Route path="/login" element={<LoginPage />}></Route>
+        <Route
+          path="/login"
+          element={<LoginPage setLogin={setLogin} />}
+        ></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
         <Route path="/forgotpassword" element={<ForgotPässwordPage />}></Route>
         <Route path="/ruta" element={<RoutePage />}></Route>
