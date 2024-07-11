@@ -132,3 +132,39 @@
     transform: translateX(100%);
   }
 }
+
+@media (max-width: 1160px) {
+  .authentication-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .authentication-form {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .authentication-links {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .authentication-greenside {
+    display: none;
+  }
+
+  .rightside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.authentication-greenside img {
+  max-width: 100%;
+  height: auto;
+}

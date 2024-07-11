@@ -113,12 +113,14 @@
   justify-content: space-between;
   height: 30px;
   background-color: var(--VerdePlano);
+  flex-direction: row;
 }
 .filter {
   padding: 2px;
   display: flex;
   align-items: center;
 }
+
 .map-page {
   width: 100%;
   height: calc(100vh - 80px);
