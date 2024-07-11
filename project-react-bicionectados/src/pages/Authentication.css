@@ -13,8 +13,8 @@
   justify-content: center;
 }
 .authentication-form {
-  width: 70%;
   height: 60%;
+  width: 50%;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -57,6 +57,36 @@
 .authentication-greenside img {
   margin-top: 100px;
 }
+.btn-login {
+  --primary-color: black;
+  --secondary-color: #fff;
+  --hover-color: rgb(62, 62, 62);
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  justify-content: center;
+  cursor: pointer;
+}
+.login-form {
+  width: 80%;
+  height: 60%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
   .authentication-page {
@@ -108,6 +138,12 @@
 .moveFromRight {
   -webkit-animation: moveFromRight 0.6s ease both;
   animation: moveFromRight 0.6s ease both;
+}
+.authentication-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
 }
 
 @-webkit-keyframes moveFromLeft {
