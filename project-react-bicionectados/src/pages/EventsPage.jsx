@@ -22,28 +22,16 @@ export default function EventPage() {
         </button>
       </div>
       <div className="eventcard-container">
-      <div className="events-container-column">
-      <EventCard
-        imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
-        title="Cicletada en Parque Forestal"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi facilis laboriosam consectetur dolor culpa consequuntur quod, aperiam in sint ea magni dolores. Nihil consectetur vero labore, laborum eius nemo."
-        details="Sáb 10:00 AM · 24 interesados"
-      />
-      <EventCard
-        imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
-        title="Cicletada en Parque Forestal"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi facilis laboriosam consectetur dolor culpa consequuntur quod, aperiam in sint ea magni dolores. Nihil consectetur vero labore, laborum eius nemo."
-        details="Sáb 10:00 AM · 24 interesados"
-      />
+        <div className="events-container-column">
+          <EventCard
+            imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
+            title="Cicletada en Parque Forestal"
+            description="Hola! Los dejamos invitados a la cicletada que realizaremos en el parque forestal."
+            details="Sáb 10:00 AM · 24 interesados"
+          />
+        </div>
+        {showCreateEvent && <CreateEvent />}
       </div>
-      {showCreateEvent && <CreateEvent />}
-       </div>
-
-       
-     
-      
-      
-     
     </div>
   );
 }
