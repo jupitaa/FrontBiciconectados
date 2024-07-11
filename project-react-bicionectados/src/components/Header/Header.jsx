@@ -11,10 +11,17 @@ export default function Header() {
   const [menu, setMenu] = useState("inicio");
   const [logged, setLogged] = useState(false);
   const [navbar, setnavbar] = useState(false);
+
   const location = useLocation();
   const handleToggleNavBar = () => {
     setnavbar((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    /* obtener la cadena de json storage */
+    const user = localStorage.getItem("usuario");
+    user && setLogged(true);
+  }, []);
 
   useEffect(() => {
     const path = location.pathname;
