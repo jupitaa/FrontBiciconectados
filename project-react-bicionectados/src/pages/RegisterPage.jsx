@@ -58,7 +58,7 @@ function RegisterPage() {
         <div className="authentication-container">
           <div className="authentication-form">
             <h2>Crear Cuenta</h2>
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
               <input
                 name="username"
                 type="name"
@@ -78,12 +78,12 @@ function RegisterPage() {
               <input
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="Contraseña"
                 value={password}
                 onChange={(e) => setPasword(e.target.value)}
                 required
               />
-              <button type="submit">Registrarme</button>
+              <button type="submit" className="btn-login">Registrarme</button>
             </form>
           </div>
         </div>
