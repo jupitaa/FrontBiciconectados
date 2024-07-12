@@ -34,10 +34,10 @@ const LoginPage = ({ setLogin }) => {
       <div className="authentication-container">
         <div className="authentication-form">
           <h2>Iniciar Sesión</h2>
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
             <input
               type="username"
-              placeholder="username"
+              placeholder="Usuario"
               name="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -49,7 +49,7 @@ const LoginPage = ({ setLogin }) => {
               value={password}
               onChange={(e) => setPasword(e.target.value)}
             />
-            <button type="submit">Inicar Sesion</button>
+            <button type="submit" className="btn-login">Inicar Sesion</button>
           </form>
           <div className="authentication-links">
             <Link to={"/register"}>Crea tu cuenta</Link>
