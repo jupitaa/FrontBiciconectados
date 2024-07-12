@@ -12,8 +12,8 @@ const EventCard = ({ imageUrl, title, description, details, author }) => {
 
   const handleRouteClick = () => {
     const propsToSend = {
-      inicio: [-33.467102090301104, -70.62626352893876],
-      destino: [-33.434635397659996, -70.64255738453193],
+      inicio: [-33.43058650550647, -70.63628515146523],
+      destino: [-33.41848237374808, -70.6205352201352],
     };
     navigate("/ruta", { state: propsToSend });
   };

@@ -1,17 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CreateEvent from "../components/buttons/CreateEvent";
 import "./EventsPage.css";
 import EventCard from "../components/buttons/EventCard";
+import axios from "axios";
 
 export default function EventPage() {
   const [showCreateEvent, setShowCreateEvent] = useState(false);
+  const [data, setData] = useState(null);
+  const [key, setKey] = useState(0);
 
   const handleToggleCreateEvent = () => {
     setShowCreateEvent((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/eventos/lista")
+      .then((resp) => {
+        setData(resp.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
-    <div className="event-container">
+    <div className="event-container" key={key}>
       <div className="event-buttons">
         <h2>Eventos</h2>
         <button
@@ -23,14 +37,26 @@ export default function EventPage() {
       </div>
       <div className="eventcard-container">
         <div className="events-container-column">
-          <EventCard
-            imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
-            title="Cicletada en Parque Forestal"
-            description="Hola! Los dejamos invitados a la cicletada que realizaremos en el parque forestal."
-            details="Sáb 10:00 AM · 24 interesados"
-          />
+          {data &&
+            data.map((item) => (
+              <div key={item.id}>
+                <EventCard
+                  imageUrl="https://www.shutterstock.com/image-photo/cyclist-falls-off-bike-into-600nw-443827051.jpg"
+                  title={item.nombre}
+                  description={item.descripcion}
+                  details={`${item.hora} - ${item.fecha}`}
+                />
+              </div>
+            ))}
         </div>
-        {showCreateEvent && <CreateEvent />}
+        {showCreateEvent && (
+          <CreateEvent
+            key={key}
+            setKey={setKey}
+            data={data}
+            setData={setData}
+          />
+        )}
       </div>
     </div>
   );
