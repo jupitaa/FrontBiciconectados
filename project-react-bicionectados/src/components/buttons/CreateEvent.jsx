@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./CreateEvent.css";
 
-const CreateEventForm = () => {
+const CreateEventForm = ({ key, setKey, data, setData }) => {
   // Estado para manejar los valores del formulario
-  const [nombre, setNombre] = useState("");
+  const [nombre, setnombre] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [lugar, setLugar] = useState("");
   const [fecha, setFecha] = useState("");
@@ -27,6 +27,8 @@ const CreateEventForm = () => {
         evento
       );
       console.log("Evento creado:", response.data);
+      setData([...data, response.data]);
+      setKey(key + 1);
     } catch (error) {
       console.error("Error al crear el evento:", error);
     }
@@ -43,7 +45,7 @@ const CreateEventForm = () => {
         placeholder="Nombre Evento"
         className="form-input"
         value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
+        onChange={(e) => setnombre(e.target.value)}
       />
       <input
         type="text"

@@ -11,12 +11,12 @@ import ButtonFriends from "../components/buttons/ButtonFriends";
 
 function ProfilePage() {
   const user = {
-    name: "CarlosClaudios xxx",
+    name: "ClaudioCarlos",
     location: "Independencia, CL",
-    bio: "Musica | Coffee Lover | CatLover | LOL",
-    seguidores: 1,
-    siguiendo: 3,
-    kilometers: 0,
+    bio: "Musica | El mejor jungla de chile | CatLover | LOL",
+    seguidores: 10000,
+    siguiendo: 10000,
+    kilometers: 100,
   };
 
   const [estado, setEstado] = useState("");
