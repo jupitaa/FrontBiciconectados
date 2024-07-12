@@ -1,24 +1,43 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Friends.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Friends.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const friendsList = [
-  { id: 1, username: 'Carlos Frinch', photoUrl: 'src/assets/images/mono calros.png' },
-  { id: 2, username: 'Elias Arancibia', photoUrl: 'src/assets/images/mono elias.png' },
-  { id: 3, username: 'Constanza Albornoz', photoUrl: 'src/assets/images/mono coni.png' },
-  { id: 4, username: 'Claudio Rojas', photoUrl: 'src/assets/images/monoclaudio.png' },
-  { id: 5, username: 'Titan Arancibia', photoUrl: 'src/assets/images/titan.jpeg' },
-  { id: 6, username: 'Shrek', photoUrl: 'src/assets/images/shrek.jpeg' },
-  
+  {
+    id: 1,
+    username: "Carlos Frinch",
+    photoUrl: "src/assets/images/Claudio Rojas.jpg",
+  },
+  {
+    id: 2,
+    username: "Elias Arancibia",
+    photoUrl: "src/assets/images/titan.jpeg",
+  },
+  {
+    id: 3,
+    username: "Constanza Albornoz",
+    photoUrl: "src/assets/images/Constanza Albornoz.jpg",
+  },
+  {
+    id: 4,
+    username: "Claudio Rojas",
+    photoUrl: "src/assets/images/Carlos Frinch.jpg",
+  },
+  {
+    id: 5,
+    username: "Titan Arancibia",
+    photoUrl: "src/assets/images/Elias Arancibia.jpg",
+  },
+  { id: 6, username: "Shrek", photoUrl: "src/assets/images/shrek.jpeg" },
 ];
 
 const Friends = () => {
   const navigate = useNavigate();
 
   const handleBackToProfile = () => {
-    navigate('/perfil');
+    navigate("/perfil");
   };
 
   return (

@@ -114,6 +114,11 @@ export default function Header() {
                 INICIAR SESION
               </Link>
             </li>
+            <li>
+              <Link to="/perfil" onClick={() => setMenu("perfil")}>
+                PERFIL
+              </Link>
+            </li>
           </ul>
 
           <div className="login-home-btn">

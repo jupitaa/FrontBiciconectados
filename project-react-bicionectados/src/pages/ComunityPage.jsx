@@ -31,7 +31,7 @@ export default function ComunityPage() {
         <Temas
           item={{
             titulo: "Necesito consejos para una bicicleta",
-            contenido: "por favor te chupáre el pene amigo",
+            contenido: "Que bicicleta me recomienda para subir el cerro",
           }}
         ></Temas>
         {publicaciones &&
