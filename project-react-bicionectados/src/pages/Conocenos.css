@@ -1,6 +1,5 @@
-
 .rectangulo1 {
-  background:  linear-gradient(180deg, #BEF16A 39%, #94D726 74%);
+  background: linear-gradient(180deg, #bef16a 39%, #94d726 74%);
   height: 95px;
 }
 
@@ -39,13 +38,22 @@
   background-color: #fff;
   width: 300px;
   height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.persona img {
+.img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   margin-bottom: 10px;
+  overflow: hidden;
+  background: #bef16a;
+}
+.img img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .persona h3 {
@@ -71,4 +79,3 @@
   margin: 0 5px;
   font-size: 30px;
 }
-
